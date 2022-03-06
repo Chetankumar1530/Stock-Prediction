@@ -1,1 +1,1 @@
-web: gunicorn manage:py:main
+web: gunicorn home.wsgi

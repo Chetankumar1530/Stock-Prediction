@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <form action= "stock" method = "POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"><h3>Enter the Stock Symbol</h3></label>
+          <input type="text" class="form-control" name = "stk" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+
+{% endblock body %}
+

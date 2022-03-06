@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<center><h4>List of all the stock and their Names</h4></center>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sno</th>
+        <th scope="col">Stock symbol </th>
+        <th scope="col">Stock Name</th>
+        <th scope="col">Industry</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for n,e,r  in all %}
+        
+        <tr>  
+            <th scope="row">{{forloop.counter}}</th>
+            
+            
+            <td> <a href="/rck?stk={{n|urlencode}}"</a>{{n}} </td>
+            <td>{{e}}</td>
+           
+            <td>{{r}}</td>
+          </tr>
+            
+          {% endfor %}
+
+
+
+
+
+{% endblock body %}

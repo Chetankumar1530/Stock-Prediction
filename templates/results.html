@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+{% if boom == 555 %}
+      
+<div class="alert alert-success" role="alert">
+  Please Enter your Stock Name   <a href="/stock" class="alert-link">Here</a>.
+</div>
+
+
+{% else %}
+
+
+  
+
+
+     
+
+
+        {% if boom == 420 %}
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+               No such stock please check  <a href="/list" class="alert-link">Here</a>.
+              </div>
+        </div>
+        
+        
+        
+        
+        {% else %}
+        <div class="container">
+          <center><h4>{{stk}} Prediction for the next day closing </h4></center>
+
+
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Sno</th>
+                <th scope="col">Model Name </th>
+                <th scope="col">Testing Error</th>
+                <th scope="col">Last traded price</th>
+        
+                <th scope="col">Prediction</th>
+              </tr>
+            </thead>
+            <tbody>
+        
+        {% for n,e,r  in len %}
+        
+        <tr>  
+            <th scope="row">{{forloop.counter}}</th>
+            
+            
+            <td>{{n}}</td>
+            <td>{{e}}</td>
+            <td>{{last}}</td>
+            <td>{{r}}</td>
+          </tr>
+            
+          {% endfor %}
+       
+             
+            {% endif %}                         
+        
+      
+            {% endif %}
+    </tbody>
+  </table>
+
+
+  </div>
+
+{% endblock body %}
+
+
+
+
